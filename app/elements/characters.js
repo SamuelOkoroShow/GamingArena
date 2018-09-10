@@ -14,24 +14,7 @@ import movetypes from '../math/moveType'
 
 // Here we need to decide what move sets each character has as well as other JS objects.
 // Moves is an array of 4. Ever Character needs an evasion move
-const characters = [
-{ 
-	id:0,
-	name:"Mining Unit",
-	avatar: char1,
-	moves: [{
-
-	},{
-
-	},
-	{},
-	evade]
-
-
-
-}
-
-]
+const characters = []
 
 var evade = {
 	name:'Evade',

@@ -8,6 +8,7 @@ import Dash from './dashboard'
 import TutorialWalkthrough from './tutorial'
 import BattleView from './battle'
 import Splash from './splash'
+import CharacterSelection from './charactersSelection'
 
 
 // Usable routes
@@ -15,12 +16,14 @@ const routes = {
   feed: Feed,
   dash: Dash,
   splash: Splash,
+  characterSelection: CharacterSelection,
   tutorial: TutorialWalkthrough,
   battleview: BattleView
 };
 
 
-// This contains Navigation components
+// This is our arc view as well as our Navigation unit
+// Dear React Native at facebook. Please stop screwing with our Navigation systems.
 
 
 export default class Index extends React.Component {
@@ -40,7 +43,7 @@ export default class Index extends React.Component {
     <Navigator
               style={{flex: 1}}
               ref={'NAV'}
-              initialRoute={{id: 'splash', name: 'splash'}}
+              initialRoute={{id: 'characterSelection', name: 'characterSelection'}}
               renderScene={this.renderScene.bind(this)}
             /> 
     );
