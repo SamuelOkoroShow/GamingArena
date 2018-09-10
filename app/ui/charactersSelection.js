@@ -41,6 +41,8 @@ export default class CharacterSelection extends React.Component {
       <View style={{flex:4}} />
         <View style={{flex:1}}>
         <ListView
+        contentContainerStyle = {{flexDirection: 'row',
+        flexWrap: 'wrap'}}
         dataSource ={this.state.dataSource}
         renderRow = {(x) => this.eachCharacter(x)}
         />
