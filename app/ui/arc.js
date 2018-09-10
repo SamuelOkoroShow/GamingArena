@@ -3,9 +3,7 @@ import { StyleSheet, Text, View, } from 'react-native';
 import {Navigator} from 'react-native-deprecated-custom-components'
 
 // Our Views/Components or whatever you want to call em
-import Feed from './feed'
-import Dash from './dashboard'
-import TutorialWalkthrough from './tutorial'
+
 import BattleView from './battle'
 import Splash from './splash'
 import CharacterSelection from './charactersSelection'
@@ -13,11 +11,8 @@ import CharacterSelection from './charactersSelection'
 
 // Usable routes
 const routes = {
-  feed: Feed,
-  dash: Dash,
   splash: Splash,
   characterSelection: CharacterSelection,
-  tutorial: TutorialWalkthrough,
   battleview: BattleView
 };
 
