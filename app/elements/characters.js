@@ -5,9 +5,9 @@
 
 
 // These are just character avatar images. Every character has just the one Avatar Image
-import char1 from "./images/char1.png"
-import char2 from "./images/char2.png"
-import char3 from "./images/char3.png"
+import char1 from "./images/el1.png"
+import char2 from "./images/el2.png"
+import char3 from "./images/el3.png"
 import movetypes from '../math/moveType'
 
 

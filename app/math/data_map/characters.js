@@ -1,7 +1,17 @@
+
+import el1 from "../../elements/images/e1.png"
+import el2 from "../../elements/images/e2.png"
+import el3 from "../../elements/images/e3.png"
+import el4 from "../../elements/images/e4.png"
+import el5 from "../../elements/images/e5.png"
+import el6 from "../../elements/images/e6.png"
+import el7 from "../../elements/images/e7.png"
+
 var characters = [{
   "id": 1,
   "first_name": "Valida",
   "fun_fact": "et magnis dis parturient montes nascetur",
+  "image" : e1,
   "background": {
     "info1": "Sed sagittis.",
     "info2": "Phasellus sit amet erat.",
@@ -13,6 +23,7 @@ var characters = [{
   "id": 2,
   "first_name": "Ailsun",
   "fun_fact": "potenti nullam porttitor lacus at",
+  "image" : e2,
   "background": {
     "info1": "Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo.",
     "info2": "Aenean auctor gravida sem.",
@@ -24,6 +35,7 @@ var characters = [{
   "id": 3,
   "first_name": "Zack",
   "fun_fact": "dapibus duis at",
+  "image" : e3,
   "background": {
     "info1": "Praesent blandit. Nam nulla.",
     "info2": "Aenean fermentum.",
@@ -35,6 +47,7 @@ var characters = [{
   "id": 4,
   "first_name": "Elsy",
   "fun_fact": "nibh fusce lacus",
+  "image" : e4,
   "background": {
     "info1": "Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede. Morbi porttitor lorem id ligula.",
     "info2": "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue.",
@@ -46,6 +59,7 @@ var characters = [{
   "id": 5,
   "first_name": "Netti",
   "fun_fact": "quam suspendisse potenti nullam",
+  "image" : e5,
   "background": {
     "info1": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
     "info2": "Donec semper sapien a libero. Nam dui.",
@@ -57,6 +71,7 @@ var characters = [{
   "id": 6,
   "first_name": "Amargo",
   "fun_fact": "non mattis pulvinar nulla pede ullamcorper",
+  "image" : e6,
   "background": {
     "info1": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
     "info2": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue.",

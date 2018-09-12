@@ -30,8 +30,8 @@ export default class CharacterSelection extends React.Component {
 
     // using ... functions is how we create the Shervil datachart btw
 
-
-    return(<View><Text>CharacterSelection</Text></View>)
+    console.log(data)
+    return(<View><Text>data</Text></View>)
 
   }
 
