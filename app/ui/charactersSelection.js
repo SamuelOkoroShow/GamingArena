@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, ListView, Text, View } from 'react-native';
+import { StyleSheet, ListView, Image, TouchableOpacity, Text, View } from 'react-native';
 import characters from '../math/data_map/characters'
 
 
@@ -15,7 +15,7 @@ export default class CharacterSelection extends React.Component {
 
     this.state = {
       characters: null,
-      isCharacterAvy: false,
+      characterAvy: false,
       dataSource : ds.cloneWithRows(characters)
     }
   }
@@ -30,33 +30,28 @@ export default class CharacterSelection extends React.Component {
 
     // using ... functions is how we create the Shervil datachart btw
 
-    console.log(data)
-    return(<View><Text>data</Text></View>)
+    return(<TouchableOpacity style={{backgroundColor:'#d3d3d3', margin:5, borderRadius:5}}><Image source={data.image} style={{width:60, height:60}} /></TouchableOpacity>)
 
+  }
+
+  selectionScreen(selection){
+    if(!selection){
+      return(<View style={{flex:1}}>
+      <Text>Select Your C</Text>
+      </View>)}else{}
   }
 
   render() {
-    return (
-      <View style={styles.container}>
-      <View style={{flex:4}} />
-        <View style={{flex:1}}>
+    return(<View>
+      <View style={{flex:1,backgroundColor: '#fff', flexDirection:'row'}}>
+      <View style={{flex:4}}></View>
         <ListView
-        contentContainerStyle = {{flexDirection: 'row',
-        flexWrap: 'wrap'}}
+        contentContainerStyle = {{ flex:1, justifyContent:'center'}}
         dataSource ={this.state.dataSource}
         renderRow = {(x) => this.eachCharacter(x)}
         />
-        </View>
-        </View>
-    );
-  }
+        </View>);
+      }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
