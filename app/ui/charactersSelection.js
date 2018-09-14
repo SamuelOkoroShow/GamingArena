@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, ListView, Image, TouchableOpacity, Text, View } from 'react-native';
+import { StyleSheet, ListView, Image, ImageBackground, TouchableOpacity, Text, View } from 'react-native';
 import characters from '../math/data_map/characters'
 
 
@@ -7,6 +7,7 @@ import characters from '../math/data_map/characters'
 // We're going to try to keep this as clean as possible 
 
 const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+import el7 from "../elements/images/e7.png"
 
 export default class CharacterSelection extends React.Component {
   // Do we want characters displayed in a listView? lets hace an indie view for now OK
@@ -16,41 +17,48 @@ export default class CharacterSelection extends React.Component {
     this.state = {
       characters: null,
       characterAvy: false,
+      imageData: el7,
+      name:'Hello World',
       dataSource : ds.cloneWithRows(characters)
     }
   }
+
+  selectedChatacters(){
+    // This returns an array
+  }
   eachCharacter(data){
-    // Each of these needs its own properties. Can we select charater at 0 without queuing charater at 1?
-    // Do we need to manipulate state for this?
-    /*this.setState({
-    * characters : {...this.state.characters}
-    *})
-    */
 
-
-    // using ... functions is how we create the Shervil datachart btw
-
-    return(<TouchableOpacity style={{backgroundColor:'#d3d3d3', margin:5, borderRadius:5}}><Image source={data.image} style={{width:60, height:60}} /></TouchableOpacity>)
-
+    return(<TouchableOpacity onPress = {() => this.setState({imageData: data.image})} style={{backgroundColor:'#d3d3d3', margin:5, borderRadius:5}}><Image source ={data.image} resizeMode="contain" style={{width:50, height:70}} /></TouchableOpacity>)
   }
 
-  selectionScreen(selection){
-    if(!selection){
-      return(<View style={{flex:1}}>
-      <Text>Select Your C</Text>
-      </View>)}else{}
-  }
+  selectedChar(){
+    if(this.state.imageData != null){
+        return(<Image source={this.state.dataImage} resizeMode="stretch" style={{flex:1, width:null, height:null}} />)
+      }else{
+        return(<View />)
+      }}
 
-  render() {
-    return(<View>
-      <View style={{flex:1,backgroundColor: '#fff', flexDirection:'row'}}>
-      <View style={{flex:4}}></View>
+
+  render(){
+    return(
+    <View style={{flex:1}}>
+      <View style={{flex:1, flexDirection:'row'}}>
+      <View style={{flex:4}}>
+      <ImageBackground source ={this.state.imageData} resizeMode="contain" style={{flex:1, width:null, height:null}}>
+      <View style={{backgroundColor:'rgba(0,0,0,0.4)', width:100, padding:5}}>
+      <Text style={{color:'#fff'}}>{this.state.name}</Text>
+      </View>
+      </ImageBackground>
+      </View>
         <ListView
-        contentContainerStyle = {{ flex:1, justifyContent:'center'}}
         dataSource ={this.state.dataSource}
         renderRow = {(x) => this.eachCharacter(x)}
+        contentContainerStyle = {{flex:1, justifyContent:'center' }}
+        style= {{flex:1}}
         />
-        </View>);
+        </View>
+        </View>
+        );
       }
 }
 
