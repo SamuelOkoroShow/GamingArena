@@ -23,6 +23,7 @@
     "git": "^0.1.5",
     "react": "16.3.1",
     "react-native": "~0.55.2",
-    "react-native-deprecated-custom-components": "^0.1.2"
+    "react-native-deprecated-custom-components": "^0.1.2",
+    "react-native-svg": "^6.5.2"
   }
 }

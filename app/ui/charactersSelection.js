@@ -8,9 +8,13 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 // We're going to try to keep this as clean as possible 
 
 const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+var colors = ["#FAD87D", "#43464C", "#184C39", "#AED1C4"]
 import el7 from "../elements/images/e7.png"
 var blurb_count = 0;
 var blurbs = ['info1', 'info2', 'info3'];
+character = {
+  moves:[move1, move2, move3]
+}
 
 export default class CharacterSelection extends React.Component {
   // Do we want characters displayed in a listView? lets hace an indie view for now OK
@@ -35,7 +39,7 @@ export default class CharacterSelection extends React.Component {
 
 
   queueMoves(){
-
+    return(<TouchableOpacity style={{borderRadius:20, width:40, height:40}}></TouchableOpacity>)
   }
 
   _nextBlurb(){
@@ -50,7 +54,9 @@ export default class CharacterSelection extends React.Component {
   }
 
   movesList(){
-
+    return(<TouchableOpacity style={{borderRadius:25, width:50, height:50}}>
+      <Image source={move1} resizeMode="stretch" style={{flex:1, width:null, height:null}} />
+      </TouchableOpacity>)
   }
 
   expandibleMovesListButton(){
@@ -76,7 +82,7 @@ export default class CharacterSelection extends React.Component {
       <View style={{flex:1, flexDirection:'row'}}>
       <View style={{flex:4}}>
       <ImageBackground source ={this.state.activeUnit.image} resizeMode="contain" style={{flex:1, width:null, height:null}}>
-      <View style={{backgroundColor:'rgba(0,0,0,0.6)', marginTop:100, width:70, padding:5}}>
+      <View style={{backgroundColor:'rgba(0,0,0,0.6)', marginTop:100, width:50, marginLeft:5, padding:5}}>
       <Text style={{color:'#fff', fontSize:7, fontWeight:'600'}}>{this.state.activeUnit.first_name.toUpperCase()}</Text>
       </View>
       <View style={{position:'absolute', bottom:0, padding:10, margin:5, backgroundColor:'rgba(0,0,0,0.6)', alignSelf:'center'}}>
@@ -92,6 +98,7 @@ export default class CharacterSelection extends React.Component {
         />
         </View>
         {this.moreJokes()}
+        {this.queueMoves()}
         </View>
         );
       }
