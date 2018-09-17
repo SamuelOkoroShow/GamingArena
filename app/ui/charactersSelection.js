@@ -3,7 +3,6 @@ import { StyleSheet, ListView, Image, ImageBackground, TouchableOpacity, Text, V
 import characters from '../math/data_map/characters'
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-
 //This could potentially contain a lot of state data and logic methodology
 // We're going to try to keep this as clean as possible 
 
@@ -12,9 +11,7 @@ var colors = ["#FAD87D", "#43464C", "#184C39", "#AED1C4"]
 import el7 from "../elements/images/e7.png"
 var blurb_count = 0;
 var blurbs = ['info1', 'info2', 'info3'];
-character = {
-  moves:[move1, move2, move3]
-}
+
 
 export default class CharacterSelection extends React.Component {
   // Do we want characters displayed in a listView? lets hace an indie view for now OK
@@ -34,6 +31,7 @@ export default class CharacterSelection extends React.Component {
     // This returns an array
   }
   eachCharacter(data){
+    console.log(data)
     return(<TouchableOpacity onPress = {() => this.setState({activeUnit: data, isCharacter: true})} style={{backgroundColor:'#d3d3d3', margin:5, borderRadius:5}}><Image source ={data.image} resizeMode="contain" style={{width:50, height:70}} /></TouchableOpacity>)
   }
 
@@ -53,9 +51,9 @@ export default class CharacterSelection extends React.Component {
     })
   }
 
-  movesList(){
+  movesList(data){
     return(<TouchableOpacity style={{borderRadius:25, width:50, height:50}}>
-      <Image source={move1} resizeMode="stretch" style={{flex:1, width:null, height:null}} />
+      <Image source={data.image} resizeMode="stretch" style={{flex:1, width:null, height:null}} />
       </TouchableOpacity>)
   }
 

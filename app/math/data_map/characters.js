@@ -7,11 +7,18 @@ import el5 from "../../elements/images/e5.png"
 import el6 from "../../elements/images/e6.png"
 import el7 from "../../elements/images/e7.png"
 
-var characters = [{
+import moves from '../bit_map/moves'
+
+const characters = [{
   "id": 1,
   "first_name": "Valida",
   "fun_fact": "et magnis dis parturient montes nascetur",
   "image" : el1,
+  "moves": {
+    seven1: moves[0],
+    seven2: moves[1],
+    seven3: moves[2]
+  },
   "background": {
     "info1": "Sed sagittis.",
     "info2": "Phasellus sit amet erat.",
@@ -24,6 +31,11 @@ var characters = [{
   "first_name": "Ailsun",
   "fun_fact": "potenti nullam porttitor lacus at",
   "image" : el2,
+  "moves": {
+    seven1: moves[0],
+    seven2: moves[1],
+    seven3: moves[2]
+  },
   "background": {
     "info1": "Maecenas rhoncus aliquam lacus. Morbi quis tortor id nulla ultrices aliquet. Maecenas leo odio, condimentum id, luctus nec, molestie sed, justo.",
     "info2": "Aenean auctor gravida sem.",
@@ -36,6 +48,11 @@ var characters = [{
   "first_name": "Zack",
   "fun_fact": "dapibus duis at",
   "image" : el3,
+  "moves": {
+    seven1: moves[0],
+    seven2: moves[1],
+    seven3: moves[2]
+  },
   "background": {
     "info1": "Praesent blandit. Nam nulla.",
     "info2": "Aenean fermentum.",
@@ -48,6 +65,11 @@ var characters = [{
   "first_name": "Elsy",
   "fun_fact": "nibh fusce lacus",
   "image" : el4,
+  "moves": {
+    seven1: moves[0],
+    seven2: moves[1],
+    seven3: moves[2]
+  },
   "background": {
     "info1": "Integer pede justo, lacinia eget, tincidunt eget, tempus vel, pede. Morbi porttitor lorem id ligula.",
     "info2": "Vestibulum ac est lacinia nisi venenatis tristique. Fusce congue, diam id ornare imperdiet, sapien urna pretium nisl, ut volutpat sapien arcu sed augue.",
@@ -60,6 +82,11 @@ var characters = [{
   "first_name": "Netti",
   "fun_fact": "quam suspendisse potenti nullam",
   "image" : el5,
+  "moves": {
+    seven1: moves[0],
+    seven2: moves[1],
+    seven3: moves[2]
+  },
   "background": {
     "info1": "In sagittis dui vel nisl. Duis ac nibh. Fusce lacus purus, aliquet at, feugiat non, pretium quis, lectus.",
     "info2": "Donec semper sapien a libero. Nam dui.",
@@ -72,6 +99,11 @@ var characters = [{
   "first_name": "Amargo",
   "fun_fact": "non mattis pulvinar nulla pede ullamcorper",
   "image" : el6,
+  "moves": {
+    seven1: moves[0],
+    seven2: moves[1],
+    seven3: moves[2]
+  },
   "background": {
     "info1": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
     "info2": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue.",
