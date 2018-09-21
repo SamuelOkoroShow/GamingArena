@@ -1,6 +1,6 @@
-import mv0 from '../../elements/faceTheBeast/mv0.jpg'
-import mv1 from '../../elements/faceTheBeast/mv1.jpg'
-import mv2 from '../../elements/faceTheBeast/mv2.jpg'
+import mv0 from '../../elements/faceTheBeast/mv0.png'
+import mv1 from '../../elements/faceTheBeast/mv1.png'
+import mv2 from '../../elements/faceTheBeast/mv2.png'
 import mv3 from '../../elements/faceTheBeast/mv3.jpg'
 import mv4 from '../../elements/faceTheBeast/mv4.jpg'
 import mv5 from '../../elements/faceTheBeast/mv5.jpg'
@@ -26,7 +26,7 @@ import mv24 from '../../elements/faceTheBeast/mv24.jpg'
 import mv25 from '../../elements/faceTheBeast/mv25.jpg'
 import mv26 from '../../elements/faceTheBeast/mv26.jpg'
 
-const moveTypes = ["Affiction", "Boost", "Curse Attack", "Craft Boost"]  //Max at 12
+const moveTypes = ["Affiction", "Boost", "Spell Attack", "Craft Boost", "Stun"]  //Max at 12
 const compounds = ["single", "double", "all"]
 
 // Elements and Energy. +1 of these for every unit you have on the field
@@ -35,7 +35,7 @@ const elements = ["fire", "water", "earth", 'air', 'incognito']
 var moveList = [
 {
 	id: 0,
-	name:'Arm It lv .1',
+	name:'Dove',
 	image: mv0,
 	effect:{
 		handle: moveTypes[1],

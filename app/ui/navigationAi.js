@@ -6,12 +6,14 @@ import {Navigator} from 'react-native-deprecated-custom-components'
 
 import BattleView from './battle'
 import Splash from './splash'
+import Rival from './rival'
 import CharacterSelection from './charactersSelection'
 
 
 // Usable routes
 const routes = {
   splash: Splash,
+  rival: Rival,
   characterSelection: CharacterSelection,
   battleview: BattleView
 };
