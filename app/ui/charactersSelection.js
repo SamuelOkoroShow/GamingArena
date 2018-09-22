@@ -89,7 +89,7 @@ export default class CharacterSelection extends React.Component {
         dataSource ={this.state.dataSource}
         renderRow = {(x) => this.eachCharacter(x)}
         contentContainerStyle = {{flex:1, marginTop:20 }}
-        style= {{flex:1}}
+        style= {{flex:1, paddingTop:30}}
         />
         </View>
         {this.moreJokes()}

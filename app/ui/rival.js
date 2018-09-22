@@ -2,7 +2,23 @@ import React from 'react';
 import rival1 from '../elements/images/rival1.jpg'
 import rival2 from '../elements/images/rival2.jpg'
 import rival3 from '../elements/images/rival3.jpg'
-import { StyleSheet, Image, Text, View, StatusBar } from 'react-native';
+import back1 from "../elements/images/background1.jpg"
+import colors from '../math/bit_map/colors'
+import { StyleSheet, Image, Text, View, StatusBar, ImageBackground } from 'react-native';
+
+//Firebase
+import * as firebase from 'firebase';
+import fireConfig from '../../auth'
+
+// Initialize Firebase
+const firebaseConfig = {
+  apiKey: fireConfig.apiKey,
+  authDomain: fireConfig.authDomain,
+  databaseURL: fireConfig.databaseURL,
+  storageBucket: fireConfig.storageBucket,
+};
+
+const firebaseApp = firebase.initializeApp(firebaseConfig);
 
 
 //This could potentially contain a lot of state data and logic methodology
@@ -10,11 +26,8 @@ import { StyleSheet, Image, Text, View, StatusBar } from 'react-native';
 
 export default class Rival extends React.Component {
   render() {
-    return (
-      <View style={styles.container}>
-        <Image source={rival1} resizeMode="cover" style={{flex:1, width:null, height:null}} />
-        </View>
-    );
+    return (<ImageBackground source ={rival3} resizeMode = "stretch" style = {{flex:1, height:null, width:null}}>
+      </ImageBackground>);
   }
 }
 

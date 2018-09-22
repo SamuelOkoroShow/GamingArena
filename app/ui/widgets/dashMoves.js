@@ -21,10 +21,10 @@ export default class movesDash extends React.Component {
   }
 
  movesList(data){
-    return(<View style={{borderRadius:35, flexDirection:'row', backgroundColor:colors[0], margin:5, borderWidth:2, justifyContent:'space-between', borderColor:colors[1], width:270, height:70}}>
-      <Image source={data.image} resizeMode="stretch" style={{width:60, margin:5, justifyContent:'center', borderWidth:2, borderColor:colors[1], height:60, borderRadius:30,}} />
-      <View style={{justifyContent:'center', flex:4}}>
-      <Text style={{fontSize:16, fontWeight:'200', margin:5, marginLeft:0, marginTop:15}}>{data.name.toUpperCase()}</Text>
+    return(<View style={{borderRadius:5, flexDirection:'row', backgroundColor:colors[0], margin:5, borderWidth:2, justifyContent:'space-between', borderColor:colors[1], width:270,}}>
+      <Image source={data.image} resizeMode="cover" style={{flex:1, padding:5, width:null, padding:10, justifyContent:'center', borderWidth:3, borderTopWidth:0, borderColor:colors[1], height:null,}} />
+      <View style={{justifyContent:'center', flex:4, padding:5}}>
+      <Text style={{fontSize:16, fontWeight:'200', margin:5, marginLeft:0, marginTop:5}}>{data.name.toUpperCase()}</Text>
       <ListView 
       dataSource = {ds.cloneWithRows(data.elements)}
       horizontal= {true}
@@ -57,7 +57,7 @@ export default class movesDash extends React.Component {
 
   render(){
            LayoutAnimation.spring();
-    return(<View><TouchableOpacity onPress={() => this.toggleExpand()} style={{right:0, alignSelf:'flex-end', width:40, borderWidth:2, borderColor:colors[1], justifyContent:'center', alignItems:'center', height:40, margin:5, borderRadius:20, backgroundColor:colors[0]}}>
+    return(<View><TouchableOpacity onPress={() => this.toggleExpand()} style={{right:0, alignSelf:'flex-end', width:40, borderWidth:2, borderColor:colors[1], justifyContent:'center', alignItems:'center', height:40, margin:5, borderRadius:2, backgroundColor:colors[0]}}>
     <Icon name = "code" size={10} style={{alignSelf:'center'}} color='#777' />
     </TouchableOpacity><View>
     {this.expandableList()}

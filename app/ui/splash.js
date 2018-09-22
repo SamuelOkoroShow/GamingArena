@@ -14,8 +14,9 @@ var sponsores = {
 
       }}
 export default class Splash extends React.Component {
-  constructor(){
-    super()
+  constructor(props){
+    super(props)
+    console.log(props)
 
 
     // This is only of the Splash state. State should be a global variable
@@ -26,6 +27,11 @@ export default class Splash extends React.Component {
   }
 sponsoreSwitch(){
   setTimeout(() => {this.declareSponsore()}, 3000)
+  setTimeout(() => {this.nextView()}, 5000)
+}
+
+nextView(){
+this.props.navigator.replace({id:'characterSelection'})
 }
 
 declareSponsore(){
