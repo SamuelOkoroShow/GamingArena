@@ -3,6 +3,9 @@
 # expo
 .expo/
 
+#Auth Codes
+auth.js
+
 # dependencies
 /node_modules
 
