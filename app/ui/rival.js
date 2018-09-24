@@ -20,6 +20,14 @@ const firebaseConfig = {
   storageBucket: fireConfig.storageBucket,
 };
 
+// # Unit Tests
+var unit = [{
+  id:0,
+  dialog:"World"
+}, {
+  id:1,
+  dialog:"I mean. I'm hello and this is my world. I am a replica's first thoughts"
+}]
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
 //This could potentially contain a lot of state data and logic methodology
@@ -29,7 +37,8 @@ const firebaseApp = firebase.initializeApp(firebaseConfig);
 export default class Rival extends React.Component {
   constructor(props){
     super(props)
-    console.log("Hello World")
+    console.log("Hello " + unit[0].dialog)
+    
     this.state = {
 
     }
@@ -39,9 +48,19 @@ export default class Rival extends React.Component {
     var x = a * b
     return x
   }
-  render() {
 
-    return (<ImageBackground source ={rival3} resizeMode = "stretch" style = {{flex:1, height:null, width:null}}>
+writeUserData() {
+  firebase.database().ref('pending_challenge/').push({
+    usernameX: "Hawaiian",
+    profile_picture : "High"
+  });
+}
+
+  render() {
+    this.writeUserData()
+    return (
+      <ImageBackground source ={rival1} resizeMode = "stretch" style = {{flex:1, height:null, width:null}}>
+      
       </ImageBackground>);
   }
 }
