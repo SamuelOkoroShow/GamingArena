@@ -39,7 +39,17 @@ export default class Rival extends React.Component {
     var x = a * b
     return x
   }
+
+  componentDidMount(){
+    setTimeout(() => this._toBattle(), 1000)
+  }
+  
+  _toBattle(){
+    this.props.navigator.push({id:'battleview'});
+  }
+
   render() {
+    
     return (
       <ImageBackground source ={rival1} resizeMode = "stretch" style = {{flex:1, justifyContent:'center', alignItems:'center', height:null, width:null}}>
       <Text style={{position:'absolute', fontSize:11, left:5, bottom:5, color:'#fff'}}>{tests[0]()}{'\n'}{tests[2]()}{'\n'}{tests[3]()}{'\n'}{tests[4]()}{'\n'}{tests[5]()}</Text>
