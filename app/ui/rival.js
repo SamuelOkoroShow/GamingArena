@@ -6,19 +6,12 @@ import back1 from "../elements/images/background1.jpg"
 import colors from '../math/bit_map/colors'
 import { StyleSheet, Image, Text, View, StatusBar, ImageBackground } from 'react-native';
 
+import characters from '../math/data_map/characters'
+import vehicles from '../math/data_map/vehicles'
+import avatat from '../elements/cookies/avatar'
 
-//Link to firebase
-//Firebase
-import * as firebase from 'firebase';
-import fireConfig from '../auth'
+import tests from '../math/unitTest'
 
-// Initialize Firebase
-const firebaseConfig = {
-  apiKey: fireConfig.apiKey,
-  authDomain: fireConfig.authDomain,
-  databaseURL: fireConfig.databaseURL,
-  storageBucket: fireConfig.storageBucket,
-};
 
 // # Unit Tests
 var unit = [{
@@ -28,7 +21,6 @@ var unit = [{
   id:1,
   dialog:"I mean. I'm hello and this is my world. I am a replica's first thoughts"
 }]
-const firebaseApp = firebase.initializeApp(firebaseConfig);
 
 //This could potentially contain a lot of state data and logic methodology
 // We're going to try to keep this as clean as possible 
@@ -37,7 +29,6 @@ const firebaseApp = firebase.initializeApp(firebaseConfig);
 export default class Rival extends React.Component {
   constructor(props){
     super(props)
-    console.log("Hello " + unit[0].dialog)
     
     this.state = {
 
@@ -48,19 +39,10 @@ export default class Rival extends React.Component {
     var x = a * b
     return x
   }
-
-writeUserData() {
-  firebase.database().ref('pending_challenge/').push({
-    usernameX: "Hawaiian",
-    profile_picture : "High"
-  });
-}
-
   render() {
-    this.writeUserData()
     return (
-      <ImageBackground source ={rival1} resizeMode = "stretch" style = {{flex:1, height:null, width:null}}>
-      
+      <ImageBackground source ={rival1} resizeMode = "stretch" style = {{flex:1, justifyContent:'center', alignItems:'center', height:null, width:null}}>
+      <Text style={{position:'absolute', fontSize:11, left:5, bottom:5, color:'#fff'}}>{tests[0]()}{'\n'}{tests[2]()}{'\n'}{tests[3]()}{'\n'}{tests[4]()}{'\n'}{tests[5]()}</Text>
       </ImageBackground>);
   }
 }

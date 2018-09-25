@@ -5,7 +5,7 @@ import Navigator from './navigationAi'
 
 export default class Arc extends React.Component {
   render(){
-    return (<View style={{flex:1}}> <StatusBar hidden={false} /><Navigator /></View>);
+    return (<View style={{flex:1}}><StatusBar hidden={false} /><Navigator /></View>);
   }
 }
 
