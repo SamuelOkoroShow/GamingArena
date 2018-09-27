@@ -40,7 +40,7 @@ export default class NavigationAi extends React.Component {
       <Navigator
               style={{flex: 1}}
               ref={'NAV'}
-              initialRoute={{id: 'rival', name: 'rival'}}
+              initialRoute={{id:'battle', name:'battle'}}
               renderScene={this.renderScene.bind(this)}
             /> 
     );

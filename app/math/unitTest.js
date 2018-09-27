@@ -1,9 +1,4 @@
-/*
-Remember that we need unit tests for 
-1. character found and ready to battle(GET api)
-2. Next Turn
-3. Turn victory
-*/
+// This is on tempurary shut down
 
 import avatat from '../elements/cookies/avatar'
 
@@ -11,6 +6,9 @@ import avatat from '../elements/cookies/avatar'
 //Firebase
 import * as firebase from 'firebase';
 import fireConfig from '../auth'
+
+var items = [];
+var challengers = 4
 
 // Initialize Firebase
 const firebaseConfig = {
@@ -20,22 +18,32 @@ const firebaseConfig = {
   storageBucket: fireConfig.storageBucket,
 };
 
-var challengers = 4
 
-const firebaseApp = firebase.initializeApp(firebaseConfig);
+// const allItemsRef = firebase.initializeApp(firebaseConfig).firebase.database().ref('pending_challenge');
+
 
 const unitTests = [
 
-	missions = () => {
+	toWar = () => {
 		return "Preparing transmisition"
 	}, 
-	objectives = () =>  {
-		
-	}, readyForTransmition = () => {
-		  firebase.database().ref('pending_challenge/' + avatat.fire_id).set({
-    usernameX: "Hawaiian",
-    profile_picture : "High & Love"
-  });
+	objectivesPrimaries = () =>  {
+    allItemsRef.once('value').then((snap) => {
+	
+	console.log(snap.val())
+      // get children as an array
+
+	snap.forEach((child) => {
+        items.push(child.val());
+      })
+
+	var data = snapshot.data()
+	console.log(data)
+    })
+
+    
+  }, readyForTransmition = () => {
+		  
 		return "Pushed our signal to cloud"
 		
 	}, interceptSignal = () => {

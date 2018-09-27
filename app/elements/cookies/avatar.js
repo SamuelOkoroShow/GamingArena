@@ -3,7 +3,7 @@ import vehicles from '../../math/data_map/vehicles'
 
 
 var myAvatar = {
-	fire_id: 0,
+	fire_id: 33,
 	name: 'Paul Merciyah',
 	exp: 1470,
 	characters: [rider[0], rider[1], vehicles[0]],

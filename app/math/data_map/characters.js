@@ -1,17 +1,17 @@
 
-import el1 from "../../elements/images/e1.png"
-import el2 from "../../elements/images/e2.png"
-import el3 from "../../elements/images/e3.png"
-import el4 from "../../elements/images/e4.png"
-import el5 from "../../elements/images/e5.png"
-import el6 from "../../elements/images/e6.png"
-import el7 from "../../elements/images/e7.png"
+import el1 from "../../elements/images/characters/olga.png"
+import el2 from "../../elements/images/characters/soolga.png"
+import el3 from "../../elements/images/characters/fox.png"
+import el4 from "../../elements/images/characters/cloud.png"
+import el5 from "../../elements/images/characters/animo.png"
+import el6 from "../../elements/images/characters/huntress.png"
+import el7 from "../../elements/images/characters/gunner97.png"
 
 import moves from '../bit_map/moves'
 
 const characters = [{
   "id": 1,
-  "first_name": "Kiva",
+  "first_name": "Olga",
   "fun_fact": "et magnis dis parturient montes nascetur",
   "image" : el1,
   "moves": [moves[0],moves[1],moves[2]],
@@ -24,7 +24,7 @@ const characters = [{
   "viking_name": "Marie-thérèse"
 }, {
   "id": 2,
-  "first_name": "Kizy",
+  "first_name": "So-Olga",
   "fun_fact": "potenti nullam porttitor lacus at",
   "image" : el2,
   "moves": [moves[0],moves[1],moves[2]],
@@ -37,7 +37,7 @@ const characters = [{
   "viking_name": "Mélinda"
 }, {
   "id": 3,
-  "first_name": "Zack",
+  "first_name": "Fox",
   "fun_fact": "dapibus duis at",
   "image" : el3,
   "moves": [moves[0],moves[1],moves[2]],
@@ -50,7 +50,7 @@ const characters = [{
   "viking_name": "Håkan"
 }, {
   "id": 4,
-  "first_name": "Elsy",
+  "first_name": "Cloud",
   "fun_fact": "nibh fusce lacus",
   "image" : el4,
   "moves": [moves[0],moves[1],moves[2]],
@@ -76,9 +76,22 @@ const characters = [{
   "viking_name": "Adèle"
 }, {
   "id": 6,
-  "first_name": "Amargo",
+  "first_name": "Huntress",
   "fun_fact": "non mattis pulvinar nulla pede ullamcorper",
   "image" : el6,
+  "moves": [moves[0],moves[1],moves[2]],
+  "background": {
+    "info1": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",
+    "info2": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Etiam vel augue.",
+    "info3": "Proin at turpis a pede posuere nonummy. Integer non velit. Donec diam neque, vestibulum eget, vulputate ut, ultrices vel, augue."
+  },
+  "isSelected": false,
+  "viking_name": "Thérèsa"
+}, {
+  "id": 7,
+  "first_name": "Gunner 0097",
+  "fun_fact": "non mattis pulvinar nulla pede ullamcorper",
+  "image" : el7,
   "moves": [moves[0],moves[1],moves[2]],
   "background": {
     "info1": "Maecenas ut massa quis augue luctus tincidunt. Nulla mollis molestie lorem. Quisque ut erat.",

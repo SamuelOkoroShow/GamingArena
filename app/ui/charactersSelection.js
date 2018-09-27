@@ -11,7 +11,6 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 const ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
 var colors = ["rgba(250, 216, 125, 0.5)", "#43464C", "#184C39", "#AED1C4"]
-import el7 from "../elements/images/e7.png"
 import back1 from "../elements/images/background1.jpg"
 var blurb_count = 0;
 var blurbs = ['info1', 'info2', 'info3'];
@@ -36,16 +35,20 @@ export default class CharacterSelection extends React.Component {
   }
   eachCharacter(data){
     console.log(data)
-    return(<TouchableOpacity onPress = {() => this.setState({activeUnit: data, isCharacter: true})} style={{backgroundColor:'#d3d3d3', margin:5, borderRadius:5}}><Image source ={data.image} resizeMode="contain" style={{width:50, height:70}} /></TouchableOpacity>)
+    return(
+      <TouchableOpacity onPress = {() => this.setState({activeUnit: data, isCharacter: true})} style={{backgroundColor:'#d3d3d3', margin:5, borderRadius:5}}><Image source ={data.image} resizeMode="contain" style={{width:50, height:70}}/></ TouchableOpacity>
+      )
   }
 
 
-  queueMoves(){
+  _queueMoves()
+  {
     return(<TouchableOpacity style={{borderRadius:20, width:40, height:40}}></TouchableOpacity>)
   }
 
-  _nextBlurb(){
-    //I want to be able to cycle this. Since we know each character has 3 blurbs, we'll only need to add a blurb_count at 3 = 0 
+  _nextBlurb()
+  {
+    // I want to be able to cycle this. Since we know each character has 3 blurbs, we'll only need to add a blurb_count at 3 = 0 
     blurb_count = blurb_count+1
     if(blurb_count == 3){
       blurb_count = 0
@@ -62,7 +65,8 @@ export default class CharacterSelection extends React.Component {
         return(<Image source={this.state.dataImage} resizeMode="stretch" style={{flex:1, width:null, height:null}} />)
       }else{
         return(<View />)
-      }}
+      }
+    }
 
       moreJokes(){
         return(<TouchableOpacity onPress={() => this._nextBlurb()} style={{ position:'absolute', right:10, bottom:5, width:40, height:40, justifyContent:'center', alignItems:'center'}}>

@@ -3,14 +3,32 @@ import rival1 from '../elements/images/rival1.jpg'
 import rival2 from '../elements/images/rival2.jpg'
 import rival3 from '../elements/images/rival3.jpg'
 import back1 from "../elements/images/background1.jpg"
+
 import colors from '../math/bit_map/colors'
+import Tests from '../math/unitTest'
+
+
 import { StyleSheet, Image, Text, View, StatusBar, ImageBackground } from 'react-native';
 
 import characters from '../math/data_map/characters'
 import vehicles from '../math/data_map/vehicles'
 import avatat from '../elements/cookies/avatar'
 
-import tests from '../math/unitTest'
+
+import * as firebase from 'firebase';
+import fireConfig from '../auth'
+
+// Initialize Firebase
+const firebaseConfig = {
+  apiKey: fireConfig.apiKey,
+  authDomain: fireConfig.authDomain,
+  databaseURL: fireConfig.databaseURL,
+  storageBucket: fireConfig.storageBucket,
+};
+var items = [];
+var challengers = 4
+
+
 
 
 // # Unit Tests
@@ -42,8 +60,9 @@ export default class Rival extends React.Component {
 
   componentDidMount(){
     setTimeout(() => this._toBattle(), 1000)
+   Tests[2]
   }
-  
+
   _toBattle(){
     this.props.navigator.push({id:'battleview'});
   }
@@ -52,7 +71,7 @@ export default class Rival extends React.Component {
     
     return (
       <ImageBackground source ={rival1} resizeMode = "stretch" style = {{flex:1, justifyContent:'center', alignItems:'center', height:null, width:null}}>
-      <Text style={{position:'absolute', fontSize:11, left:5, bottom:5, color:'#fff'}}>{tests[0]()}{'\n'}{tests[2]()}{'\n'}{tests[3]()}{'\n'}{tests[4]()}{'\n'}{tests[5]()}</Text>
+      <Text style={{position:'absolute', fontSize:11, left:5, bottom:5, color:'#fff'}}></Text>
       </ImageBackground>);
   }
 }
