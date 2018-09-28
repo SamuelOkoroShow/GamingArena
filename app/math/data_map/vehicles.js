@@ -7,7 +7,7 @@ import theKisser from '../../elements/images/hounds/theKisser.png'
 
 import moves from '../bit_map/moves'
 
-var vehicles = [
+export default vehicles = [
 	{
 		id: 0,
 		name: "Future Hoversio",

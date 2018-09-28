@@ -10,6 +10,7 @@ const myAvatar = {
 		kills:100,
 		deaths: 76,
 	},
+	_playMove,
 	favourites:{
 		
 	}
@@ -23,6 +24,8 @@ var move2 = {
 var move3 = {
 
 }
-_playMove(){
+var _playMove = () => {
 
 }
+
+export default myAvatar

@@ -11,6 +11,7 @@ const myAvatar = {
 		kills:100,
 		deaths: 76,
 	},
+	playTurn,
 	favourites:{
 		
 	}
@@ -27,3 +28,5 @@ var move3 = {
 var playTurn = () => {
 
 }
+
+export default myAvatar;
