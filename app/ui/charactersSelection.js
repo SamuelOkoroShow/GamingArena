@@ -31,19 +31,20 @@ export default class CharacterSelection extends React.Component {
   }
 
   selectedChatacters(){
-    // This returns an array
+        
+        // This returns an array
   }
   eachCharacter(data){
     console.log(data)
     return(
-      <TouchableOpacity onPress = {() => this.setState({activeUnit: data, isCharacter: true})} style={{backgroundColor:'#d3d3d3', margin:5, borderRadius:5}}><Image source ={data.image} resizeMode="contain" style={{width:50, height:70}}/></ TouchableOpacity>
+              <TouchableOpacity onPress = {() => this.setState({activeUnit: data, isCharacter: true})} style={{backgroundColor:'#d3d3d3', margin:5, borderRadius:5}}><Image source ={data.image} resizeMode="contain" style={{width:50, height:70}}/></ TouchableOpacity>
       )
   }
 
 
   _queueMoves()
   {
-    return(<TouchableOpacity style={{borderRadius:20, width:40, height:40}}></TouchableOpacity>)
+                return(<TouchableOpacity style={{borderRadius:20, width:40, height:40}}></TouchableOpacity>)
   }
 
   _nextBlurb()
@@ -62,15 +63,19 @@ export default class CharacterSelection extends React.Component {
 
   selectedChar(){
     if(this.state.activeUnit.image != null){
-        return(<Image source={this.state.dataImage} resizeMode="stretch" style={{flex:1, width:null, height:null}} />)
+        return(
+          <Image source={this.state.dataImage} resizeMode="stretch" style={{flex:1, width:null, height:null}} 
+          />)
       }else{
-        return(<View />)
+        return(<View 
+        />)
       }
     }
 
       moreJokes(){
-        return(<TouchableOpacity onPress={() => this._nextBlurb()} style={{ position:'absolute', right:10, bottom:5, width:40, height:40, justifyContent:'center', alignItems:'center'}}>
-      <Icon name = 'angle-double-right'  size = {27} color ="#333" />
+        return(
+      <TouchableOpacity onPress={() => this._nextBlurb()} style={{ position:'absolute', right:10, bottom:5, width:40, height:40, justifyContent:'center', alignItems:'center'}}>
+          <Icon name = 'angle-double-right'  size = {27} color ="#333" />
        </TouchableOpacity>)
       }
 

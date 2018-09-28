@@ -1,7 +1,8 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Dimensions, ImageBackground } from 'react-native';
 import * as firebase from 'firebase';
 import fireConfig from '../auth'
+import stage1 from '../elements/images/stages/burners.jpg'
 
 // Initialize Firebase
 const firebaseConfig = {
@@ -11,6 +12,8 @@ const firebaseConfig = {
   storageBucket: fireConfig.storageBucket,
 };
 
+var {height, width} = Dimensions.get('window');
+var vehicleWidth = width - 100;
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
@@ -18,15 +21,31 @@ const firebaseApp = firebase.initializeApp(firebaseConfig);
 // We're going to try to keep this as clean as possible 
 
 export default class Battle extends React.Component {
+  constructor(){
+    super()
+
+    this.state = {
+      vehicles : {
+        left:0
+      }
+    }
+  }
 
   _onTurnEnded(){
 
   }
+
+  _vehicleUI(){
+    return(<View style={{width:vehicleWidth}}></View>)
+  }
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Welcome to The Battle View!</Text>
+      <ImageBackground source={stage1} style={styles.container}>
+        <View style={{flex:3}}>
         </View>
+        <View style={{flex:1}}></View>
+        <View style={{flex:3}}></View>
+        </ImageBackground>
     );
   }
 }
@@ -34,8 +53,9 @@ export default class Battle extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    width:null,
+    height:null,
+    justifyContent:'center',
+    alignItems:'center'
   },
 });

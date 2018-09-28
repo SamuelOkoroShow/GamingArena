@@ -10,7 +10,7 @@ import moves from '../bit_map/moves'
 var vehicles = [
 	{
 		id: 0,
-		name: "FA8",
+		name: "Future Hoversio",
 		image: fa8,
 		exp: 100,
 		stats: [moves[0], moves[0], moves[0]]

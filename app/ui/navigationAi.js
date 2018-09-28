@@ -15,7 +15,7 @@ const routes = {
   splash: Splash,
   rival: Rival,
   characterSelection: CharacterSelection,
-  battleview: BattleView
+  battle: BattleView
 };
 
 
