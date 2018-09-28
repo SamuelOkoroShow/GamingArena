@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, Dimensions, ImageBackground } from 'react-nativ
 import * as firebase from 'firebase';
 import fireConfig from '../auth'
 import stage1 from '../elements/images/stages/burners.jpg'
+import colors from '../math/bit_map/colors'
 
 // Initialize Firebase
 const firebaseConfig = {
@@ -14,6 +15,7 @@ const firebaseConfig = {
 
 var {height, width} = Dimensions.get('window');
 var vehicleWidth = width - 100;
+var vehicleHeight = height/2 - (height/7);
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
@@ -35,16 +37,26 @@ export default class Battle extends React.Component {
 
   }
 
-  _vehicleUI(){
-    return(<View style={{width:vehicleWidth}}></View>)
+  _vehicleUIRival(){
+    return(<View style={{width:vehicleWidth, margin:10, height:vehicleHeight, backgroundColor:colors[1]}}></View>)
   }
+
+  _vehicleUIMe(){
+    return(<View style={{width:vehicleWidth, alignSelf:'flex-end', margin:10, height:vehicleHeight, backgroundColor:colors[1]}}></View>)
+  }
+
+
   render() {
     return (
       <ImageBackground source={stage1} style={styles.container}>
+        <View style={{height:25}} />
         <View style={{flex:3}}>
+        {this._vehicleUIRival()}
         </View>
         <View style={{flex:1}}></View>
-        <View style={{flex:3}}></View>
+        <View style={{flex:3}}>
+        {this._vehicleUIMe()}
+        </View>
         </ImageBackground>
     );
   }
@@ -55,7 +67,6 @@ const styles = StyleSheet.create({
     flex: 1,
     width:null,
     height:null,
-    justifyContent:'center',
-    alignItems:'center'
+
   },
 });
