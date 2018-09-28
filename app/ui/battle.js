@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, TouchableOpacity, Text,Image, View, Dimensions, ImageBackground } from 'react-native';
 import * as firebase from 'firebase';
 import fireConfig from '../auth'
-import stage1 from '../elements/images/stages/tunnelVision.jpg'
+import stage1 from '../elements/images/stages/burners.jpg'
 import colors from '../math/bit_map/colors'
 import avatar from '../elements/cookies/avatar'
 import tempAi from '../elements/cookies/tempAi'
@@ -52,13 +52,13 @@ export default class BattleArena extends React.Component {
   _vehicleUIRival(){
     console.log(tempAi)
     return(<View style={{width:vehicleWidth, borderRadius:5, height:vehicleHeight, margin:5, backgroundColor:colors[1]}}>
-      <View style={{flex:4}}>
-      <Text style={{margin:10, color:'#fff', fontSize:13, fontWeight:'300'}}>{tempAi.name.toUpperCase()}</Text>
-        <View style={{margin:5,}}>
-          <Text style={{margin:5, color:'#fff', fontSize:19, fontWeight:'300'}}>{tempAi.characters[2].name.toUpperCase()}</Text>
+      <View style={{flex:5}}>
+      <Text style={{margin:10, color:'#fff', fontSize:13, marginBottom:0, fontWeight:'300'}}>{tempAi.name.toUpperCase()}</Text>
+        <View style={{margin:5, marginTop:0}}>
+          <Text style={{margin:5, marginBottom:0, color:'#fff', fontSize:19, fontWeight:'300'}}>{tempAi.characters[2].name.toUpperCase()}</Text>
         </View>
         <View style={{flex:1, justifyContent:'center', alignItems:'center'}}>
-        <View style={{borderWidth:1, alignItems:'center', borderColor:colors[0], borderRadius:2, width:260,flexDirection:'row', height:90}}>
+        <View style={{borderWidth:1, alignItems:'center', borderColor:colors[0], borderRadius:2, width:310, padding:10, flexDirection:'row', height:110}}>
           {this._Rivalcharacter(tempAi.characters[0])}
           <View style={{width:1, height:30, backgroundColor:colors[0]}} />
           {this._Rivalcharacter(tempAi.characters[1])}
@@ -85,10 +85,13 @@ export default class BattleArena extends React.Component {
         <View style={{flex:3}}>
         {this._vehicleUIRival()}
         </View>
-        <View style={{flex:1, backgroundColor:'rgba(0,0,0,0.3)'}}></View>
+        <View style={{flexDirection:'row', flex:1, backgroundColor:'rgba(0,0,0,0.3)'}}>
+        <View style={{width:60, backgroundColor:colors[0]}} />
+        </View>
         <View style={{flex:3, justifyContent:'flex-end'}}>
         {this._vehicleUIMe()}
         </View>
+        <View style={{height:60, backgroundColor:colors[1]}}></View>
         </ImageBackground>
     );
   }
