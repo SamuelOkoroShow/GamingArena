@@ -1,5 +1,6 @@
 {
   "expo": {
+  	"name" : "XR: Coliseum",
     "sdkVersion": "27.0.0"
   }
 }

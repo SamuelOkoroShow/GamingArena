@@ -59,28 +59,23 @@ export default class Rival extends React.Component {
   }
 
   componentDidMount(){
-    setTimeout(() => this._toBattle(), 1000)
-   Tests[2]
+    setTimeout(() => {this._toBattle()}, 1000)
+
   }
 
   _toBattle(){
-    this.props.navigator.push({id:'battleview'});
+    this.props.navigator.push({id:'battle', name:'battle'});
   }
 
   render() {
     
     return (
-      <ImageBackground source ={rival1} resizeMode = "stretch" style = {{flex:1, justifyContent:'center', alignItems:'center', height:null, width:null}}>
+      <ImageBackground source = {rival1} resizeMode = "stretch" style = {{flex:1, justifyContent:'center', alignItems:'center', height:null, width:null}}>
       <Text style={{position:'absolute', fontSize:11, left:5, bottom:5, color:'#fff'}}></Text>
       </ImageBackground>);
   }
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+
 });

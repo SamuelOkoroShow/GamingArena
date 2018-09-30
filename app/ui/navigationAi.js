@@ -28,10 +28,13 @@ export default class NavigationAi extends React.Component {
     super()
   }
 
+  pushToCache(){
+
+  }
   // define scene
   renderScene({id}, navigator){
     const Scene = routes[id]
-    return <Scene {...this.props} hideMenu={() => this.hideMenu()} pushToCache = {this.pushToCash} navigator={navigator}/>
+    return <Scene {...this.props} hideMenu={() => this.hideMenu()} pushToCache = {() => this.pushToCash()} navigator={navigator}/>
   }
 
 
@@ -40,7 +43,7 @@ export default class NavigationAi extends React.Component {
       <Navigator
               style={{flex: 1}}
               ref={'NAV'}
-              initialRoute={{id:'battle', name:'battle'}}
+              initialRoute={{id:'rival', name:'rival'}}
               renderScene={this.renderScene.bind(this)}
             /> 
     );

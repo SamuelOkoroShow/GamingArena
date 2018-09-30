@@ -6,7 +6,7 @@ var myAvatar = {
 	fire_id: 33,
 	name: 'Paul Merciyah',
 	exp: 1470,
-	characters: [rider[0], rider[1], vehicles[0]],
+	characters: [rider[2], rider[3], vehicles[2]],
 	ratios: {
 		kills:100,
 		deaths: 76,

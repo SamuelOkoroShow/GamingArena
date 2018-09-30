@@ -35,15 +35,13 @@ export default class CharacterSelection extends React.Component {
         // This returns an array
   }
   eachCharacter(data){
-    console.log(data)
     return(
               <TouchableOpacity onPress = {() => this.setState({activeUnit: data, isCharacter: true})} style={{backgroundColor:'#d3d3d3', margin:5, borderRadius:5}}><Image source ={data.image} resizeMode="contain" style={{width:50, height:70}}/></ TouchableOpacity>
       )
   }
 
 
-  _queueMoves()
-  {
+  _queueMoves(){
                 return(<TouchableOpacity style={{borderRadius:20, width:40, height:40}}></TouchableOpacity>)
   }
 
@@ -102,7 +100,7 @@ export default class CharacterSelection extends React.Component {
         />
         </View>
         {this.moreJokes()}
-        {this.queueMoves()}
+        {this._queueMoves()}
         </ImageBackground>
         );
       }

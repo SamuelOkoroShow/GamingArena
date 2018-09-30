@@ -37,7 +37,7 @@ const characters = [{
   "viking_name": "Mélinda"
 }, {
   "id": 3,
-  "first_name": "Fox",
+  "first_name": "Bunny",
   "fun_fact": "dapibus duis at",
   "image" : el3,
   "moves": [moves[0],moves[1],moves[2]],
