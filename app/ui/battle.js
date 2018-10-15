@@ -55,8 +55,8 @@ export default class BattleArena extends React.Component {
   }
 
   _vehicleUIRival(){
-    console.log(tempAi)
     return(<View style={{width:vehicleWidth, borderRadius:5, padding:5, height:vehicleHeight, margin:5, backgroundColor:colors[1]}}>
+     <Text style={{position:'absolute', color:colors[0], fontSize:26}}>87%</Text>
       <View style={{flex:5}}>
       <Text style={{margin:10, color:'#fff', fontSize:11, marginBottom:0, fontWeight:'300'}}>{tempAi.name.toUpperCase()}</Text>
         <View style={{margin:5, marginTop:0}}>
@@ -74,7 +74,7 @@ export default class BattleArena extends React.Component {
         </View>
         </View>
       </View>
-      <View style={{flex:1, flexDirection:'row', backgroundColor:colors[0], borderRadius:5, borderTopEndRadius:0, borderTopStartRadius:0, marginBottom:0}}>
+      <View style={{flex:1, flexDirection:'row', borderWidth:1, borderColor:colors[3], backgroundColor:colors[0], borderRadius:5, borderTopEndRadius:0, borderTopStartRadius:0, marginBottom:0}}>
       <View style={{flex:1}} />
       <View style={{flex:1}}><Image source ={tempAi.characters[2].image} style={{width:120, height: 80, marginTop:-15}} resizeMode='contain' /></View>
       <View style={{flex:1}} />
@@ -101,11 +101,11 @@ export default class BattleArena extends React.Component {
         </View>
         </View>
       </View>
-      <View style={{flex:1, flexDirection:'row', backgroundColor:colors[2], borderRadius:5, borderTopEndRadius:0, borderTopStartRadius:0, marginBottom:0}}>
+      <TouchableOpacity style={{flex:1, flexDirection:'row', backgroundColor:colors[2], borderRadius:5, borderWidth:1, borderColor:colors[0], borderTopEndRadius:0, borderTopStartRadius:0, marginBottom:0}}>
       <View style={{flex:1}} />
       <View style={{flex:1}}><Image source ={avatar.characters[2].image} style={{width:120, height:80, marginTop:-15}} resizeMode='contain' /></View>
       <View style={{flex:1}} />
-      </View>
+      </TouchableOpacity>
       </View>)
   }
 
